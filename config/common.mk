@@ -128,7 +128,6 @@ PRODUCT_PACKAGES += \
 
 # Custom Lineage packages
 PRODUCT_PACKAGES += \
-    AudioFX \
     LineageSettingsProvider \
     LineageSetupWizard \
     Eleven \
@@ -136,7 +135,6 @@ PRODUCT_PACKAGES += \
     Jelly \
     LockClock \
     Trebuchet \
-    Updater \
     WallpaperPicker \
     WeatherProvider
 
