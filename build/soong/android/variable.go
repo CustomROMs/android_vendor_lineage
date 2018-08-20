@@ -9,6 +9,9 @@ type Product_variables struct {
 	Uses_non_treble_camera struct {
 		Cflags []string
 	}
+	Needs_egl_khr_workaround struct {
+		Cflags []string
+	}
 	Needs_text_relocations struct {
 		Cppflags []string
 	}
@@ -38,6 +41,7 @@ type ProductVariables struct {
 	Has_legacy_camera_hal1  *bool `json:",omitempty"`
 	Java_Source_Overlays *string `json:",omitempty"`
 	Uses_non_treble_camera  *bool `json:",omitempty"`
+	Needs_egl_khr_workaround  *bool `json:",omitempty"`
 	Needs_text_relocations  *bool `json:",omitempty"`
 	Specific_camera_parameter_library  *string `json:",omitempty"`
 	Target_process_sdk_version_override *string `json:",omitempty"`

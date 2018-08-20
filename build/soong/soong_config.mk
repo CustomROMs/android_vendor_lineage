@@ -11,6 +11,7 @@ $(call add_json_str, Specific_camera_parameter_library, $(TARGET_SPECIFIC_CAMERA
 $(call add_json_str_omitempty, Target_process_sdk_version_override, $(TARGET_PROCESS_SDK_VERSION_OVERRIDE))
 $(call add_json_str_omitempty, Target_shim_libs, $(TARGET_LD_SHIM_LIBS))
 $(call add_json_bool, Uses_non_treble_camera,                $(filter true,$(TARGET_USES_NON_TREBLE_CAMERA)))
+$(call add_json_bool, Needs_egl_khr_workaround,              $(filter true,$(BOARD_EGL_WORKAROUND_BUG_10194508)))
 $(call add_json_bool, Uses_generic_camera_parameter_library, $(if $(TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY),,true))
 $(call add_json_bool, Uses_nvidia_enhancements, $(filter TRUE,$(NV_ANDROID_FRAMEWORK_ENHANCEMENTS)))
 $(call add_json_bool, Uses_qcom_bsp_legacy, $(filter true,$(TARGET_USES_QCOM_BSP_LEGACY)))
