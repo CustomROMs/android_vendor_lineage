@@ -404,7 +404,7 @@ void healthd_board_mode_charger_set_backlight(bool)
 }
 #endif
 
-void healthd_board_mode_charger_init(void)
+void healthd_board_mode_charger_init_real(void)
 {
     GRFont* tmp_font;
     int res = gr_init_font("font_log", &tmp_font);
@@ -415,4 +415,10 @@ void healthd_board_mode_charger_init(void)
         gr_font = gr_sys_font();
     }
 
+}
+
+void healthd_board_mode_charger_init(void)
+{
+   healthd_board_mode_charger_init_real();
+   healthd_board_mode_charger_init_real();
 }
