@@ -224,8 +224,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_PACKAGES_DEBUG += \
     micro_bench \
     procmem \
-    procrank \
-    strace
+    procrank
 
 # Conditionally build in su
 ifneq ($(TARGET_BUILD_VARIANT),user)
