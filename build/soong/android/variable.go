@@ -1,5 +1,30 @@
 package android
 type Product_variables struct {
+        Force_screenshot_cpu_path struct {
+                Cppflags []string
+        }
+        Use_samsung_colorformat struct {
+                Cflags []string
+        }
+        Requires_synchronous_setsurface struct {
+		Cflags []string
+        }
+        Disable_ashmem_tracking struct {
+		Cflags []string
+        }
+	Allows_invalid_pthread struct {
+		Cppflags []string
+	}
+	Egl_needs_handle struct {
+		Cppflags []string
+	}
+	Egl_workaround_bug_10194508 struct {
+		Cppflags []string
+	}
+	Exynos4_enhancements struct {
+		Cflags []string
+		Cppflags []string
+	}
 	Additional_gralloc_10_usage_bits struct {
 		Cppflags []string
 	}
@@ -8,6 +33,9 @@ type Product_variables struct {
 	}
 	Has_legacy_camera_hal1 struct {
 		Cflags []string
+	}
+	Needs_text_relocations struct {
+		Cppflags []string
 	}
 	Should_skip_waiting_for_qsee struct {
 		Cflags []string
@@ -22,15 +50,6 @@ type Product_variables struct {
 	}
 	Supports_legacy_hw_fde struct {
 		Cflags []string
-	}
-	Uses_non_treble_camera struct {
-		Cflags []string
-	}
-	Needs_egl_khr_workaround struct {
-		Cflags []string
-	}
-	Needs_text_relocations struct {
-		Cppflags []string
 	}
 	Target_process_sdk_version_override struct {
 		Cppflags []string
@@ -54,14 +73,20 @@ type Product_variables struct {
 }
 
 type ProductVariables struct {
+	Force_screenshot_cpu_path    *bool `json:",omitempty"`
+	Use_samsung_colorformat    *bool `json:",omitempty"`
+	Requires_synchronous_setsurface    *bool `json:",omitempty"`
+	Disable_ashmem_tracking    *bool `json:",omitempty"`
+	Allows_invalid_pthread    *bool `json:",omitempty"`
+	Egl_needs_handle    *bool `json:",omitempty"`
+	Egl_workaround_bug_10194508    *bool `json:",omitempty"`
+	Exynos4_enhancements    *bool `json:",omitempty"`
 	Additional_gralloc_10_usage_bits  *string `json:",omitempty"`
 	Apply_msm8974_1440p_egl_workaround  *bool `json:",omitempty"`
 	Has_legacy_camera_hal1  *bool `json:",omitempty"`
+	Needs_text_relocations  *bool `json:",omitempty"`
 	Java_Source_Overlays *string `json:",omitempty"`
 	Should_skip_waiting_for_qsee  *bool `json:",omitempty"`
-	Uses_non_treble_camera  *bool `json:",omitempty"`
-	Needs_egl_khr_workaround  *bool `json:",omitempty"`
-	Needs_text_relocations  *bool `json:",omitempty"`
 	Specific_camera_parameter_library  *string `json:",omitempty"`
 	Supports_hw_fde  *bool `json:",omitempty"`
 	Supports_hw_fde_perf  *bool `json:",omitempty"`
